@@ -16,13 +16,12 @@ const CoursesSection = () => {
         Learn from the best
       </h1>
       <p className="text-center text-gray-500 pt-2 text-lg md:max-w-2xl mx-auto">
-
        
         Explore our top-rated courses across various categories. From coding and
         design to business and wellness .our courses are crafted to deliver
         results.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-0 md:my-16 my-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1  md:grid-cols-4 gap-6 px-4  md:px-0 md:my-16 my-10 max-w-6xl  mx-auto">
 
         {allCourses.slice(0, 4).map((course, index) => (
           <CourseCard key={index} course={course} />
