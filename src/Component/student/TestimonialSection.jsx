@@ -13,7 +13,7 @@ const TestimonialSection = () => {
   {dummyTestimonial.map((testimonial, index) => (
     <div
       key={index}
-      className="border border-gray-300 rounded-lg pb-6 text-left  bg-white rounded-lg shadow-[0px_4px_15px_0px] overflow-hidden shadow-black/5 border border"
+      className="border border-gray-300 rounded-lg pb-6 text-left  bg-white rounded-lg shadow-[0px_4px_15px_0px] overflow-hidden shadow-black/5 border hover:-translate-y-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
     >
       <div className="flex items-center space-x-4 px-5 py-4  bg-gray-500/10">
         <img
