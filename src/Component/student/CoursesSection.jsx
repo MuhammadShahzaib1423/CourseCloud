@@ -30,6 +30,7 @@ const CoursesSection = () => {
       <CourseCard course={course} />
     </div>
   ))}
+  
 </div>
 
       <Link to={'/course-list'} onClick={() => window.scrollTo(0, 0)} className="text-gray-500 border border-gray-500/30 px-10 py-3 rounded mx-auto flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300">

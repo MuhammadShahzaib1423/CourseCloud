@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import CourseCard from '../../Component/student/CourseCard';
 import { assets } from '../../Component/Assets/assets';
 import Footer from '../../Component/student/Footer';
+import AnimatedContent from '../../Component/student/companies_scroll';
 
 const CoursesList = () => {
 
@@ -35,10 +36,30 @@ if(allCourses && allCourses.length > 0) {
       <img src={assets.cross_icon} alt="cross icon" className='cursor-pointer'  onClick={()=>navigate('/course-list')}/>
       </div>
   }
-  <div className=' grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-3 lg:grid-cols-4 my-16 px-2 md:p-0 '>
-      {filteredCourses.map((course,index) => <CourseCard key={index} course={course} />)}
+  
+      
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 my-16 px-2 md:p-0">
+  {filteredCourses.map((course, index) => (
+    <AnimatedContent
+      key={index}
+      distance={0}          
+      direction="vertical"  
+      duration={0.6}
+      ease="easeOut"
+      initialOpacity={0}
+      animateOpacity
+      scale={1.2}           
+      threshold={0.2}
+      delay={0.1 * index}   
+    >
+      <CourseCard course={course} />
+    </AnimatedContent>
+  ))}
+</div>
+
+
   </div>
-  </div>
+
   <Footer />
   </>
   )
